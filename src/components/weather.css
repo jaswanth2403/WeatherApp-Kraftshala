@@ -1,0 +1,20 @@
+.weather-data{
+    font-size: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: auto;
+    margin: 5px;
+    color: white;
+    
+}
+.invalid-weather-data{
+    font-size: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 5px;
+    height:auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
