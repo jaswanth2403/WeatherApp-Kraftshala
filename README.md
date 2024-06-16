@@ -24,7 +24,7 @@ The initial state includes location for storing the user input, locationsList fo
 Form Handling:
 A form is provided for the user to input a location (city name or zip code). When the form is submitted, the addLocation function is called.
 The addLocation function prevents the default form submission, checks if the location is new, and then fetches weather data for that location using the fetchWeather function.
-=
+
 
 
 Fetching Weather Data:
@@ -34,7 +34,7 @@ The response data is stored in the weatherData state, keyed by location. This al
 Displaying Weather Data:
 The WeatherItem component is responsible for displaying the weather data. It rounds the temperature, humidity, and wind speed values for better readability.
 Each location's weather data is displayed in a list, with each entry being a WeatherItem component.
-=
+
 
 Dark/Light Mode Toggle:
 A button is provided to toggle between dark mode and light mode. The toggleDarkMode function toggles the isDarkMode state.
@@ -43,7 +43,7 @@ The app container's class changes based on the isDarkMode state, applying approp
 Styling:
 CSS is used to style the application. Separate styles are defined for dark mode and light mode, ensuring a visually appealing and user-friendly interface.
 Responsive design principles are applied to ensure the app works well on various devices, including desktops, tablets, and mobiles.
-=
+
 
 
 
@@ -53,21 +53,27 @@ Responsive design principles are applied to ensure the app works well on various
 Technologies Used:
 =
 React:
-Used to build the user interface with functional components and hooks for state management.
 =
+Used to build the user interface with functional components and hooks for state management.
+
 Axios:
+=
 Used for making HTTP requests to the OpenWeatherMap API to fetch weather data.
 
 OpenWeatherMap API:
-Provides the weather data based on the user's input location.
 =
+Provides the weather data based on the user's input location.
+
 CSS:
+=
 Used for styling the application, including the implementation of dark and light modes.
 
 JavaScript:
-Core language for implementing the logic and functionality of the application.
 =
+Core language for implementing the logic and functionality of the application.
+
 Moment.js:
+=
 Used for formatting dates and times to display current date and time in a user-friendly format.
 
 
