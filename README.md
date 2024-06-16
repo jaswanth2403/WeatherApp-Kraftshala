@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+Instructions on how to run the application locally.
+=
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1.First you need use ""create-react-app" for initialising the weatherapp react folder.------ "create-react-app weatherapp --use-npm"
+2.Then we need to install the required dependencies according to our needs by using NPM . These dependencies are   -- "AXIOS" , "moment" .
+3.Then we have to write the code for weatherapp  to fetch the details of the required city.
+4.After writing the code we have to run the react application by using the command:  "npm start"
+5.After running the application the desired output will be generated in the local server port in the browser.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Brief Description of the Approach and Technologies Used:
+=
+Initial Setup:
+The project is initialized using React, a popular JavaScript library for building user interfaces."
+The initial state includes location for storing the user input, locationsList for tracking multiple locations, weatherData for storing weather information, and isDarkMode for managing the theme mode.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Form Handling:
+A form is provided for the user to input a location (city name or zip code). When the form is submitted, the addLocation function is called.
+The addLocation function prevents the default form submission, checks if the location is new, and then fetches weather data for that location using the fetchWeather function.
+=
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Fetching Weather Data:
+The fetchWeather function uses Axios to make API calls to the OpenWeatherMap API. It constructs the URL using the provided location and API key.
+The response data is stored in the weatherData state, keyed by location. This allows for easy retrieval and display of weather data for multiple locations.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Displaying Weather Data:
+The WeatherItem component is responsible for displaying the weather data. It rounds the temperature, humidity, and wind speed values for better readability.
+Each location's weather data is displayed in a list, with each entry being a WeatherItem component.
+=
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Dark/Light Mode Toggle:
+A button is provided to toggle between dark mode and light mode. The toggleDarkMode function toggles the isDarkMode state.
+The app container's class changes based on the isDarkMode state, applying appropriate CSS styles for dark and light modes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Styling:
+CSS is used to style the application. Separate styles are defined for dark mode and light mode, ensuring a visually appealing and user-friendly interface.
+Responsive design principles are applied to ensure the app works well on various devices, including desktops, tablets, and mobiles.
+=
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Technologies Used:
+=
+React:
+Used to build the user interface with functional components and hooks for state management.
+=
+Axios:
+Used for making HTTP requests to the OpenWeatherMap API to fetch weather data.
 
-### Analyzing the Bundle Size
+OpenWeatherMap API:
+Provides the weather data based on the user's input location.
+=
+CSS:
+Used for styling the application, including the implementation of dark and light modes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+JavaScript:
+Core language for implementing the logic and functionality of the application.
+=
+Moment.js:
+Used for formatting dates and times to display current date and time in a user-friendly format.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+Any known issues or limitations.
+=
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. The main issues are handling the errors .
+2. I used the try and catch error handling statements , to handle the generated errors.
+3. so the locations are limited to some of the popular cities only.
+4. As it is limited to only popular cities . This application cannot generate the weather details of  villages and towns . 
